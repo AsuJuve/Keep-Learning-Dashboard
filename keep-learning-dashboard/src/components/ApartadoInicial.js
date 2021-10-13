@@ -1,6 +1,8 @@
 import React from 'react';
 import PanelesPrincipales from './PanelesPrincipales';
-import UltimoAgregado from './UltimoAgregado';
+import UltimoProductoAgregado from './UltimoProductoAgregado';
+import UltimoUsuarioAgregado from './UltimoUsuarioAgregado';
+
 function FilaInicial(){
     return(
 		<div className="container-fluid">
@@ -14,9 +16,9 @@ function FilaInicial(){
 			{/*<!-- Ultimas instancias agregadas de usuarios y productos -->*/}
 			<div className="row">
 				
-				<UltimoAgregado entidad="producto"/>
+				<UltimoProductoAgregado entidad="producto"/>
 
-				<UltimoAgregado entidad="usuario"/>	
+				<UltimoUsuarioAgregado entidad="usuario"/>	
 			</div>
 
 		</div>

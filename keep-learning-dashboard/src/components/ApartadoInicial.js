@@ -3,7 +3,7 @@ import PanelesPrincipales from './PanelesPrincipales';
 import UltimoProductoAgregado from './UltimoProductoAgregado';
 import UltimoUsuarioAgregado from './UltimoUsuarioAgregado';
 
-function FilaInicial(){
+function ApartadoInicial(){
     return(
 		<div className="container-fluid">
 			<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
@@ -16,13 +16,13 @@ function FilaInicial(){
 			{/*<!-- Ultimas instancias agregadas de usuarios y productos -->*/}
 			<div className="row">
 				
-				<UltimoProductoAgregado entidad="producto"/>
+				<UltimoProductoAgregado/>
 
-				<UltimoUsuarioAgregado entidad="usuario"/>	
+				<UltimoUsuarioAgregado/>	
 			</div>
 
 		</div>
     )
 
 }
-export default FilaInicial;
+export default ApartadoInicial;

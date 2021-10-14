@@ -29,13 +29,11 @@ class Panel extends React.Component{
     }
 
     componentDidMount(){
-        this._isMounted = true;
         this.apiCall(this.elegirUrl(),this.mostrarCantidad);
     }
 
     //Como necesitare setState, es necesario usar una arrow function
     mostrarCantidad = (data) =>{
-        this.setState({cantidad:data.count});
         switch(this.props.entidad){
             case "productos":
             case "usuarios":

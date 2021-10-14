@@ -2,23 +2,23 @@ import React from 'react';
 import Panel from './Panel';
 
 let totalProductos = {
+    entidad: "productos",
     color:   "primary",
     titulo: "Total de Productos",
-    valor: 21,
     icono: "fas fa-shopping-cart",
 }
 
 let totalUsuarios ={
+    entidad: "usuarios",
     color:   "info",
     titulo: "Total de Usuarios",
-    valor: 79,
     icono: "fas fa-users",
 }
 
 let totalCategorias = {
+    entidad: "categorias",
     color:   "danger",
     titulo: "Total de Categorias",
-    valor: 49,
     icono: "fas fa-tag",
 }
 

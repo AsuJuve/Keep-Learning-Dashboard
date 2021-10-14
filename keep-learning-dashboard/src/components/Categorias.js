@@ -21,7 +21,8 @@ function Categorias(){
 						<table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
 							<thead>
 								<tr>
-																				<th>{/*Atributos*/}</th>
+																				<th>Id</th>
+																				<th>Nombre</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -29,7 +30,7 @@ function Categorias(){
 																				<th>{/*Atributos*/}</th>
 								</tr>
 							</tfoot>
-							<ListadoCategorias categorias={/*this.state.listaCategorias*/} />
+							<ListadoCategorias categorias={[]} />
 						</table>
 					</div>
 				</div>

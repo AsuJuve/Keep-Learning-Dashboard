@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ListadoProductos from './ListadoProductos';
 
 function Productos(){
@@ -21,7 +20,8 @@ function Productos(){
 						<table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
 							<thead>
 								<tr>
-																				<th>{/*Atributos*/}</th>
+																				<th>Id</th>
+																				<th>Nombre</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -29,7 +29,7 @@ function Productos(){
 																				<th>{/*Atributos*/}</th>
 								</tr>
 							</tfoot>
-							<ListadoProductos productos={/*this.state.listaProductos*/} />
+							<ListadoProductos productos={[]} />
 						</table>
 					</div>
 				</div>

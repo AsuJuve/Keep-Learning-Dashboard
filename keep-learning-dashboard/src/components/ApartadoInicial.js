@@ -1,5 +1,5 @@
 import React from 'react';
-import PanelesPrincipales from './PanelesPrincipales';
+import PanelesIniciales from './PanelesIniciales';
 import UltimoProductoAgregado from './UltimoProductoAgregado';
 import UltimoUsuarioAgregado from './UltimoUsuarioAgregado';
 
@@ -10,8 +10,8 @@ function ApartadoInicial(){
 				<h1 className="h3 mb-0 text-gray-800">Dashboard Keep Learning</h1>
 			</div>
 		
-			{/*<!-- PanelesPrincipales-->*/}
-			<PanelesPrincipales />
+			{/*<!-- PanelesIniciales-->*/}
+			<PanelesIniciales />
 
 			{/*<!-- Ultimas instancias agregadas de usuarios y productos -->*/}
 			<div className="row">

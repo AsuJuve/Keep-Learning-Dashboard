@@ -21,7 +21,7 @@ class UltimoProductoAgregado extends React.Component{
             .catch(e => console.log(e));
     }
 
-    componentDidMount = (data) =>{
+    componentDidMount(){
         this.apiCall("http://localhost:3000/api/products",this.mostrarProducto);
     }
 

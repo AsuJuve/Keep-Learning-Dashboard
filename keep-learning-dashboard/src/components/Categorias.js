@@ -2,41 +2,53 @@ import React from 'react';
 
 import ListadoCategorias from './ListadoCategorias';
 
-function Categorias(){
-	/*
-		fetch('http://localhost:3001/api/categorias')
-		.then(response => response.json())
-		.then(res => {
-				this.setState({ listaCategorias: res.data})
-		})
-		*/
+class Categorias extends React.Component{
+	constructor(){
+        super()
+        this.state = {
+            categorias: []
+        }
+    }
+
+    apiCall(url, consecuencia){
+        fetch(url)
+            .then(response => response.json())
+            .then(data => consecuencia(data))
+            .catch(e => console.log(e));
+    }
+
+    componentDidMount (){
+        this.apiCall("http://localhost:3000/api/products",this.mostrarProducto);
+    }
+
+    mostrarProducto = (data) =>{
+        this.setState({categorias : data.countByCategory})
+		console.log(this.state.categorias);
+    }
 	
-	return(
-		<div>
-			<h1 className="h3 mb-2 text-gray-800">Categorias en la Base de Datos</h1>
-			
-			<div className="card shadow mb-4">
-				<div className="card-body">
-					<div className="table-responsive">
-						<table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-							<thead>
-								<tr>
-																				<th>Id</th>
-																				<th>Nombre</th>
-								</tr>
-							</thead>
-							<tfoot>
-								<tr>
-																				<th>{/*Atributos*/}</th>
-								</tr>
-							</tfoot>
-							<ListadoCategorias categorias={[]} />
-						</table>
+	render(){	
+		return(
+			<div>
+				<h1 className="h3 mb-2 text-gray-800">Categorias en la Base de Datos</h1>
+				
+				<div className="card shadow mb-4">
+					<div className="card-body">
+						<div className="table-responsive">
+							<table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+								<thead>
+									<tr>
+																					<th>Nombre</th>
+																					<th>Número de cursos</th>
+									</tr>
+								</thead>
+								<ListadoCategorias categorias={this.state.categorias} />
+							</table>
+						</div>
 					</div>
-				</div>
-			</div>      
-		</div>     
-	)
+				</div>      
+			</div>     
+		)
+	}
 }
 
 export default Categorias;

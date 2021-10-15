@@ -22,7 +22,7 @@ class UltimoUsuarioAgregado extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("http://localhost:3000/api/users",this.mostrarUsuario);
+        this.apiCall("http://grupo-3-keeplearning.herokuapp.com/api/users",this.mostrarUsuario);
     }
 
     mostrarUsuario = (data) =>{

@@ -20,9 +20,9 @@ class Panel extends React.Component{
         switch(this.props.entidad){
             case "productos":
             case "categorias":
-                return "http://localhost:3000/api/products";
+                return "http://grupo-3-keeplearning.herokuapp.com/api/products";
             case "usuarios":
-                return  "http://localhost:3000/api/users";
+                return  "http://grupo-3-keeplearning.herokuapp.com/api/users";
             default:
                 return "";
         }

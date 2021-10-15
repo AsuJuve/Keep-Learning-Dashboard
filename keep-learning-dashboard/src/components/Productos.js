@@ -17,7 +17,7 @@ class Productos extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("http://localhost:3000/api/products",this.mostrarProducto);
+        this.apiCall("http://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
     }
 
     mostrarProducto = (data) =>{

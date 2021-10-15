@@ -18,7 +18,7 @@ class Categorias extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("http://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
+        this.apiCall("https://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
     }
 
     mostrarProducto = (data) =>{

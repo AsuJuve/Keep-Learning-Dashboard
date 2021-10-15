@@ -22,7 +22,7 @@ class UltimoUsuarioAgregado extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("http://grupo-3-keeplearning.herokuapp.com/api/users",this.mostrarUsuario);
+        this.apiCall("https://grupo-3-keeplearning.herokuapp.com/api/users",this.mostrarUsuario);
     }
 
     mostrarUsuario = (data) =>{
@@ -43,7 +43,6 @@ class UltimoUsuarioAgregado extends React.Component{
                         </div>
                         <h7 className="m-0 font-weight-bold text-gray-700">Correo Electrónico: </h7>
                         <h7 className="m-0 font-weight-bold text-gray-600">{this.state.usuario.email}</h7><br/>
-                        <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle de usuario</a>
                     </div>
                 </div>
             </div> 

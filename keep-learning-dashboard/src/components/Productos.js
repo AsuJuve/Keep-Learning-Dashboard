@@ -17,11 +17,12 @@ class Productos extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("http://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
+        this.apiCall("https://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
     }
 
     mostrarProducto = (data) =>{
         this.setState({productos : data.products})
+		console.log("aaaa")
 		console.log(this.state.productos);
     }
 	
@@ -38,27 +39,19 @@ class Productos extends React.Component{
 									<tr>
 																					<th>Id</th>
 																					<th>Nombre</th>
-																					<th>Descripción corta</th>
-																					<th>Precio</th>
-																					<th>Número de estudiantes</th>
-																					<th>Rating</th>
+																					<th>Descripción</th>
 																					<th>Categoría</th>
 									</tr>
 								</thead>
 								<tfoot>
 									<tr>
-									<th>Id</th>
+																					<th>Id</th>
 																					<th>Nombre</th>
-																					<th>Descripción corta</th>
-																					<th>Precio</th>
-																					<th>Número de estudiantes</th>
-																					<th>Rating</th>
+																					<th>Descripción</th>
 																					<th>Categoría</th>
 									</tr>
 								</tfoot>
-								{this.state.productos.forEach(producto => {
-									<ListadoProductos productos={producto} />
-								})}
+									<ListadoProductos productos={this.state.productos} />
 							</table>
 						</div>
 					</div>

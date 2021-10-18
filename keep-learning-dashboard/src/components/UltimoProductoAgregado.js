@@ -44,6 +44,7 @@ class UltimoProductoAgregado extends React.Component{
                         <h7 className="m-0 font-weight-bold text-gray-700">Categoría: </h7>
                         <h7 className="m-0 font-weight-bold text-gray-600">{this.state.producto.category}</h7><br/>
                         <p>{this.state.producto.shortDescription}</p>
+                        <a className="btn btn-danger" target="_blank" rel="nofollow" href={"https://grupo-3-keeplearning.herokuapp.com/productDetail/"+this.state.producto.id}>Ver detalle</a>
                     </div>
                 </div>
             </div> 

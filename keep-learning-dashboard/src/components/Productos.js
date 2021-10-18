@@ -1,5 +1,5 @@
 import React from 'react';
-import ListadoProductos from './ListadoProductos';
+import Producto from './Producto';
 
 class Productos extends React.Component{
 	constructor(){
@@ -17,12 +17,11 @@ class Productos extends React.Component{
     }
 
     componentDidMount (){
-        this.apiCall("https://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProducto);
+        this.apiCall("https://grupo-3-keeplearning.herokuapp.com/api/products",this.mostrarProductos);
     }
 
-    mostrarProducto = (data) =>{
+    mostrarProductos = (data) =>{
         this.setState({productos : data.products})
-		console.log("aaaa")
 		console.log(this.state.productos);
     }
 	
@@ -41,6 +40,7 @@ class Productos extends React.Component{
 																					<th>Nombre</th>
 																					<th>Descripción</th>
 																					<th>Categoría</th>
+																					<th>Detalle</th>
 									</tr>
 								</thead>
 								<tfoot>
@@ -49,9 +49,14 @@ class Productos extends React.Component{
 																					<th>Nombre</th>
 																					<th>Descripción</th>
 																					<th>Categoría</th>
+																					<th>Detalle</th>
 									</tr>
 								</tfoot>
-									<ListadoProductos productos={this.state.productos} />
+								<tbody>
+										{this.state.productos.map(producto => (
+											<Producto producto={producto} />
+										))}
+								</tbody>
 							</table>
 						</div>
 					</div>
